@@ -28,6 +28,7 @@ let persons = [
 ];
 
 app.use(cors()) 
+app.use(express.static('build'))
 
 // middleware functions
 const unknownEndpoint = (request, response) => {
