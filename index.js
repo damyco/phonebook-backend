@@ -57,9 +57,10 @@ app.put("/api/persons/:id", (request, response, next) => {
   };
   const body = request.body;
   const person = {
+    name: body.name,
     number: body.number,
   };
-  console.log(request.params.id);
+
   Person.findOneAndUpdate(
     request.params.id,
     person,
